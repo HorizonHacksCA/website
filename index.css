@@ -1,0 +1,73 @@
+@font-face {
+	font-family: Inter;
+	src: url("/fonts/Inter.ttc");
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	background: #0a0a0a;
+	color: white;
+	font-family: Inter;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	scroll-snap-type: y mandatory;
+}
+
+h1 {
+	font-size: 7em;
+/*	background: -webkit-linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: 0px;
+}
+
+hr {
+	width: 2em;
+	margin-left: 0px;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+li {
+	font-size: 1.5em;
+	padding-bottom: .5em;
+}
+
+.cover {
+	width: 100%;
+	height: 100%;
+	background: none;
+	display: flex;
+	scroll-snap-align: center;
+}
+
+.column {
+	width: 50%;
+	flex: 50%;
+	margin: auto;
+	margin-left: 5%;
+	margin-right: 5%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.icon {
+	height: 2em;
+}
+
+#particles-js {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
