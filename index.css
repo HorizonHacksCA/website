@@ -10,12 +10,13 @@ html, body {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y proximity;
 }
 
 h1 {
 	font-family: "InterDisplay";
 	font-size: 7em;
+	margin-bottom: 0px;
 }
 
 h2 {
@@ -27,10 +28,12 @@ h2 {
 
 h3 {
 	font-size: 2.5em;
+	margin-bottom: 0px;
 }
 
 h4 {
 	font-size: 1.75em;
+	margin-bottom: 0px;
 }
 
 hr {
@@ -135,6 +138,29 @@ li {
 
 .content {
 	overflow: hidden;
+}
+
+.person {
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	margin-bottom: .5em;
+}
+
+.person img {
+	height: 4em;
+	width: 4em;
+	border-radius: 50%;
+	padding-right: 1em;
+}
+
+.person p {
+	margin: 0px;
+}
+
+.person i {
+	color: #c0c0c0;
 }
 
 #particles-js {
