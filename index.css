@@ -58,6 +58,9 @@ li {
 	height: 100%;
 	background: none;
 	display: flex;
+/*}
+
+.click {*/
 	scroll-snap-align: center;
 }
 
@@ -109,14 +112,14 @@ li {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
+}
 
-	.notopmargininportrait {
-		margin-top: 0px;
-	}
-	
-	.nobottommargininportrait {
-		margin-bottom: 0px;
-	}
+.notopmargin {
+	margin-top: 0px;
+}
+
+.nobottommargin {
+	margin-bottom: 0px;
 }
 
 @media only screen and (orientation: landscape) {
