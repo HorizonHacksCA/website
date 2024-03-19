@@ -1,14 +1,12 @@
-@font-face {
-	font-family: Inter;
-	src: url("/fonts/Inter.ttc");
+html {
+	background: #0a0a0a;
 }
 
 html, body {
 	margin: 0;
 	height: 100%;
-	background: #0a0a0a;
 	color: white;
-	font-family: Inter;
+	font-family: "Inter";
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -16,13 +14,13 @@ html, body {
 }
 
 h1 {
+	font-family: "InterDisplay";
 	font-size: 7em;
-/*	background: -webkit-linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;*/
 }
 
 h2 {
+	font-family: "InterDisplay";
+	font-weight: 800;
 	font-size: 3em;
 	margin-bottom: 0px;
 }
@@ -41,6 +39,12 @@ li {
 	padding-bottom: .5em;
 }
 
+.goofy {
+	background: -webkit-linear-gradient(45deg, #3f5efb 0%, #fc466b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .cover {
 	width: 100%;
 	height: 100%;
@@ -50,17 +54,39 @@ li {
 }
 
 .column {
-	width: 50%;
 	flex: 50%;
 	margin: auto;
 	margin-left: 5%;
 	margin-right: 5%;
-	display: table-cell;
-	vertical-align: middle;
+}
+
+@media only screen and (orientation: portrait) {
+	.cover {
+		flex-direction: column;
+	}
+
+	.column {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media only screen and (orientation: landscape) {
+	.column {
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
 
 .icon {
 	height: 2em;
+}
+
+.content {
+	overflow: hidden;
 }
 
 #particles-js {
@@ -69,5 +95,5 @@ li {
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	z-index: 0;
+	z-index: -1;
 }
