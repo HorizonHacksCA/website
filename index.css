@@ -152,7 +152,7 @@ li {
 	height: 4em;
 	width: 4em;
 	border-radius: 50%;
-	padding-right: 1em;
+	margin-right: 1em;
 }
 
 .person p {

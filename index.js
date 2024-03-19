@@ -1,5 +1,5 @@
-async function getContributors(repo = "GTOHacks/website") {
-	const response = await fetch("https://api.github.com/repos/"+repo+"/contributors", {
+async function getJSON(url) {
+	const response = await fetch(url, {
 			method: "GET",
 			mode: "cors",
 			cache: "no-cache",
@@ -13,14 +13,19 @@ async function getContributors(repo = "GTOHacks/website") {
 	return response.json();
 }
 
-function balls() {
-	getContributors().then((data) => {
-		elem = document.getElementById("contributors");
-		for(i = 0; i < data.length; i++) {
-			elem.innerHTML += '<a class="person" href="' + data[i]["html_url"] + '" target="_blank"><img src="' + data[i]["avatar_url"] + '"/><div class="name"><p class="goofy">' + data[i]["login"] + "</p></div>";
-		}
+function addContributor(user) {
+	elem = document.getElementById("contributors");
+	getJSON(user["url"]).then((userdata) => {
+		elem.innerHTML += '<a class="person" href="' + user["html_url"] + '" target="_blank"><img src="' + user["avatar_url"] + '"/><div class="name" id="user-' + user["login"] + '"><p class="goofy">' + user["login"] + "</p><i>" + userdata["name"] + "</i></div>";
 	});
 }
+
+getJSON("https://api.github.com/repos/GTOHacks/website/contributors").then((users) => {
+	for(i = 0; i < users.length; i++) {
+		addContributor(users[i]);
+	}
+});
+
 particlesJS.load('particles-js', 'particlesjs/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
