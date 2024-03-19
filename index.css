@@ -109,6 +109,14 @@ li {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
+
+	.notopmargininportrait {
+		margin-top: 0px;
+	}
+	
+	.nobottommargininportrait {
+		margin-bottom: 0px;
+	}
 }
 
 @media only screen and (orientation: landscape) {
