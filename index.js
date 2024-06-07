@@ -20,7 +20,7 @@ function addContributor(user) {
 	});
 }
 
-getJSON("https://api.github.com/repos/GTOHacks/website/contributors").then((users) => {
+getJSON("https://api.github.com/repos/WASDHacks/website/contributors").then((users) => {
 	for(i = 0; i < users.length; i++) {
 		addContributor(users[i]);
 	}
