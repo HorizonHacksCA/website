@@ -2,7 +2,7 @@ html {
 	background: #0a0a0a;
 }
 
-html, body {
+html, body, .parallax, .parallax_layer--front {
 	margin: 0;
 	height: 100%;
 	color: white;
@@ -11,6 +11,30 @@ html, body {
 	-ms-user-select: none;
 	user-select: none;
 	scroll-snap-type: y proximity;
+}
+
+.parallax {
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.parallax_layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.parallax_layer--front {
+	transform: translateZ(0);
+}
+
+.parallax_layer--back {
+	transform: translateZ(-1px);
+	height: 100vh;
 }
 
 h1 {
@@ -51,7 +75,7 @@ li {
 }
 
 .goofy {
-	background: -webkit-linear-gradient(45deg, #3f5efb 0%, #fc466b 100%);
+	background: -webkit-linear-gradient(270deg, #ffba08 0%, #fc466b 50%, #2b63f3 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -133,7 +157,15 @@ li {
 }
 
 .icon {
-	height: 2em;
+	width: 80%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	text-align: center;
+	margin: auto;
+	z-index: -1;
 }
 
 .content {
