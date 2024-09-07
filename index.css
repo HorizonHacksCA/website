@@ -84,7 +84,7 @@ li {
 }
 
 .goofy {
-	background: -webkit-linear-gradient(270deg, #ffba08 0%, #fc466b 50%, #2b63f3 100%);
+	background: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
