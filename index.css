@@ -43,7 +43,7 @@ html, body, .parallax, .parallax_layer--front {
 	width: 400%;
 	z-index: -1;
 	display: flex;
-	background: -webkit-linear-gradient(270deg, #8bbad0 0%, #96a3c1 25%, #9f86b1 75%, #715481 100%);
+	background: -webkit-linear-gradient(270deg, #8bbad0 0%, #96a3c1 25%, #8492b2 75%, #6e7ea2 100%);
 }
 
 h1 {
